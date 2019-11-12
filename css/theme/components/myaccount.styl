@@ -1,0 +1,156 @@
+.myaccount
+    &__header
+        .ico
+            width: 30px
+            height: 30px
+
+    &:hover
+        .myaccount__header a
+            background: none
+
+    .header &.on
+        z-index: 200
+
+    &__content
+        .form-list
+            position: relative
+
+            .fields
+                position: static
+
+        > .title
+            font-size: 0
+            text-align: left
+
+            &:before
+                content: 'acesse sua conta'
+                font-size: 16px
+                font-weight: 500
+                color: color1_bg
+
+        .email-input, .password-input
+            background: #f7f7f7
+            height: 30px
+            border-radius: 30px
+            box-shadow: none
+            width: calc(100% - 110px)
+            border: 0
+
+        .actions
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            padding: 15px 0 0
+
+    &__login
+        label
+            display: block
+            font-size: 12px
+            font-weight: semibold
+            color: #666666
+            text-transform: lowercase
+
+            &:before
+                content: 'seu '
+
+        .pass
+            position: static
+
+        &-btn
+            width: 90px
+            height: 90px
+            background: #85ae3e
+            border-radius: 50%
+            box-shadow: 0 2px 0 #6b8e30
+            font-size: 14px
+
+            &:before
+                content: 'acessar conta'
+
+            span
+                display: none
+
+            &:hover
+                background: #85ae3e
+
+    &__forgot
+        display: block
+        font-size: 11px
+        position: absolute
+        top: 0
+        right: 0
+        left: auto
+        color: #666666
+        width: 90px
+        text-align: center
+
+        &:before
+            content: 'esqueci a senha'
+
+        span
+            display: none
+
+    &__register
+        position: relative
+        min-height: 125px
+
+        .std
+            max-width: calc(100% - 110px)
+            font-size: 11px
+            font-weight: regular
+            color: #666666
+
+            &:before
+                content: 'crie sua conta'
+                font-size: 16px
+                font-weight: 500
+                color: color1_bg
+                padding-bottom: 20px
+                display: block
+
+        &-btn
+            width: 90px
+            height: 90px
+            border-radius: 50%
+            background: #cd592a
+            color: #fff
+            font-size: 14px
+            font-weight: 400
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 0
+            padding: 0 20px
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+            box-shadow: 0 2px 0 #bb4e37
+
+            &:before
+                content: 'criar conta'
+
+            span
+                display: none
+
+            &:hover
+                background: #cd592a
+
+@media (min-width: 993px)
+    .myaccount
+        padding: 15px 0
+
+        &__header
+            .text
+                display: block
+                font-size: 15px
+                font-weight: medium
+                color: #333333
+                margin-left: 5px
+                text-transform: lowercase
+
+        &__content
+            box-shadow: 0px 0px 10px 0px rgba(22, 23, 40, 0.15)
+            border-radius: 4px
+            padding: 30px 20px 20px

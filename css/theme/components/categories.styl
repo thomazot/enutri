@@ -1,5 +1,14 @@
+ico-down = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAGCAYAAAD68A/GAAAAcElEQVQImVXMMQrCABBE0WcI2OkxcgYV7awklTcNmDT2YhO9iAnWKtiMEBcWdv58dnY9Vhe8UOPpf5ZoMC/wwRZdiqnUYYd3kU89VmixyLZhPeoSI/Y4Yx1B7lu6sQwcJvIm7B42wE+ER4pT8iEMfAERVxm2dTNhqAAAAABJRU5ErkJggg=='
+
 @media (max-width: 992px)
     .categories
+        &__show
+            background: #fff
+            color: color1_bg
+
+            &:hover
+                background: #fff
+
         .parent
             position: relative
 
@@ -29,6 +38,7 @@
                 font-size: 20px
                 background: rgba(255, 255, 255, 0.1)
                 transition: all 0.2s ease
+                color: #fff
 
             &.on
                 &:after
@@ -42,4 +52,56 @@
 
 @media (min-width: 993px)
     .categories
+        flex: 1
+        min-width: 0
         margin-bottom: 0 !important
+        background: none
+
+        .ul--0
+            justify-content: center
+
+        &__all
+            display: none
+
+        .a--0
+            color: #333
+            white-space: nowrap
+
+        .li--0
+            &.parent
+                > a
+                    &:after
+                        content: url(ico-down)
+                        margin-left: 10px
+                        margin-top: -3px
+
+            &:hover
+                .a--0
+                    background: none
+                    color: #333
+
+        .a--1
+            font-size: 14px
+            font-weight: medium
+            color: #333333
+            padding-left: 15px
+
+        .box--1
+            padding: 0
+            box-shadow: 0px 0px 10px 0px rgba(22, 23, 40, 0.15)
+
+        .ul--1
+            background: #f9ede9
+            padding: 15px 0
+
+        .li--1
+            &:hover
+                background: #f4ddd5
+
+        &--justify
+            .li--0
+                flex: 0
+
+        .categories__products, .categories__block
+            margin-left: 0
+            border: 0

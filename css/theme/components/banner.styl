@@ -1,2 +1,38 @@
 .cms-home .header-container + .banner
-    margin: 0
+    margin: -15px 0 20px
+
+    .owl-pagination
+        position: absolute
+        bottom: 15px
+        left: 50%
+        transform: translateX(-50%)
+
+    .owl
+        &-prev, &-next
+            width: 60px
+            height: 60px
+
+            &:before
+                font-size: 20px
+
+.banner
+    img
+        width: 100% !important
+        object-fit: contain
+        object-position: center
+
+#banner__banner-regua
+    width: viewport
+    max-width: calc(100% - 30px)
+    margin: 0 auto
+
+    .ruler
+        &__title
+            font-size: 18px
+            font-weight: medium
+            color: color1_bg
+
+        &__description
+            font-size: 13px
+            font-weight: regular
+            color: #666666

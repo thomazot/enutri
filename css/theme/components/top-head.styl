@@ -1,0 +1,57 @@
+.top-head
+    display: none
+    margin-bottom: 0 !important
+    font-size: 14px
+    background: color1_bg
+    color: #fff
+
+    .ico
+        fill: color2_bg
+        width: 20px
+        height: 20px
+        margin-right: 10px
+
+    &__container
+        display: flex
+        justify-content: space-between
+        aling-items: center
+        width: viewport
+        max-width: calc(100% - 30px)
+        margin: 0 auto
+        height: 40px
+
+    &__contact
+        display: flex
+
+    &__item
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        + .top-head__item
+            margin-left: 20px
+
+    .mymenu
+        display: flex
+        align-items: center
+
+        .ul--0
+            display: flex
+
+        .a--0
+            color: #fff
+            font-size: 14px
+            font-weight: 400
+
+        .li--0
+            margin: 0
+
+            + .li--0
+                &:before
+                    content: '/'
+                    display: inline-block
+                    margin: 0 10px
+
+@media (min-width: 993px)
+    .top-head
+        display: block

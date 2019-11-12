@@ -13,7 +13,7 @@ bold = 700
 /**
  * Mixin - Viewport
  */
-viewport = 1160px
+viewport = 1200px
 /**
  * Mixin - Responsive
  * @media (max-width screen-sm-min)
@@ -45,7 +45,11 @@ screen-lg = 1200px
  * Estilo base do elementos do Html
  */
 body
-    font-family: 'Exo 2', sans-serif
+    font-family: 'Montserrat', sans-serif
+
+.main-container
+    width: viewport
+    max-width: calc(100% - 30px)
 
 .wrapper-container
     overflow: visible
@@ -97,3 +101,11 @@ body
 @import 'components/categories'
 @import 'components/header'
 @import 'components/banner'
+@import 'components/top-head'
+@import 'components/search'
+@import 'components/footer'
+@import 'components/myaccount'
+@import 'components/mycart'
+@import 'components/owl'
+@import 'components/products'
+@import 'components/prices'
