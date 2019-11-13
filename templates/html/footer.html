@@ -1,0 +1,86 @@
+<div class="footer__row">
+    <div class="footer__col">
+        {{widget type="interface/widget_logo" template="interface/widgets/logo.phtml" identificador="logofooter" imagem="wysiwyg/logo/z-logo.svg" imagem_mobile="wysiwyg/logo/logo.svg" alt_imagem="enutri" tag_html="div" tag_html_home="h3"}}
+        {{widget type="interface/widget_social" template="interface/widgets/social.phtml" identificador="social" redes="all"}}
+        <div class="footer__box">
+            <h3 class="footer__title footer__title--central">CENTRAL DE ATENDIMENTO</h3>
+            <div class="footer__phone footer__phone--800">0800 771 1213</div>
+            <div class="footer__phone">(11) 5904-9390</div>
+            <div class="footer__phone">(11) 99346-9973</div>
+            <div class="footer__phone">(11) 99347-4289</div>
+            <div class="footer__phone">(11) 99345-0341</div>
+            <a href="mailto:contato@enutri.com.br" class="footer__email">contato@enutri.com.br</a>
+        </div>
+    </div>
+    <div class="footer__col">
+        <h3 class="footer__title">benefícios</h3>
+        <div class="footer__box footer__box--ruler">
+            <div class="footer__ruler">
+                <h4>frete grátis</h4>
+                <div>nas compras acima de R$ 300,00</div>
+            </div>
+            <div class="footer__ruler">
+                <h4>6x no cartão</h4>
+                <div>com parcela 'mínima de R$20,00</div>
+            </div>
+            <div class="footer__ruler">
+                <h4>5% de desconto</h4>
+                <div>à vista ou transferência bancária</div>
+            </div>
+            <div class="footer__ruler">
+                <h4>retire em nossa loja</h4>
+                <div>Rua Borges Lagoa, 1060, Vila Clementino, SP</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__col">
+        <div class="footer__box">
+            <h3 class="footer__title">categorias</h3>
+            {{block type="menubuilder/output" identifier="footer-categories"}}
+        </div>
+    </div>
+    <div class="footer__col">
+        <div class="footer__box">
+            <h3 class="footer__title">tire suas dúvidas</h3>
+            {{block type="menubuilder/output" identifier="footer-help"}}
+        </div>
+        <div class="footer__box">
+            <h3 class="footer__title">sua conta</h3>
+            {{block type="menubuilder/output" identifier="footer-account"}}
+        </div>
+    </div>
+</div>
+
+<div class="footer__payment-send">
+    <div class="footer__content">
+        <div class="footer__payment">
+            <h3 class="footer__title">formas de pagamento</h3>
+            {{widget type="interface/widget_pagtos" template="interface/widgets/pagtos.phtml" identificador="pagtos_footer" pagtos="all"}}
+        </div>
+        <div class="footer__send">
+            <h3 class="footer__title">formas de envio</h3>
+            {{widget type="interface/widget_envios" template="interface/widgets/envios.phtml" identificador="envios_tooer" envios="2,5,3,4"}}
+        </div>
+    </div>
+</div>
+
+<div class="footer__securitys">
+    <div class="footer__content">
+        <div class="footer__security">
+            <h3 class="footer__title">certificações</h3>
+            {{widget type="interface/widget_seals" template="interface/widgets/seals.phtml" identificador="selos_footer"  seals="all"}}
+        </div>
+    </div>
+</div>
+
+<div class="footer__copyrights">
+    <div class="footer__content">
+        <h3 class="footer__title footer__title--store">©enutri 2019.</h3>
+        <p>Qualquer produto comprado pode ser trocado em até 7 dias após a entrega, conforme política de trocas e devoluções. </p>
+        <p>Todos os produtos vendidos podem apresentar alterações em sua tonalidade. </p>
+        <p>*Frete grátis para São Paulo-Capital, acima de R$300,00. </p>
+        <p>**Desconto progressivo de até 10% em produtos selecionados. </p>
+        <p>***Todo o site em 6x sem juros com parcela mínima de R$ 20,00.</p>
+        <p>****Exceto Fórmulas e Leites. Nutricionista Responsável: Dra. Patricia Lopes de Oliveira - CRN/SP 6054</p>
+    </div>
+</div>

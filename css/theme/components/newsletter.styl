@@ -1,0 +1,51 @@
+.newsletter
+    display: flex
+    justify-content: center
+    align-items: center
+    background-image: url(bgnews)
+    background-repeat: no-repeat
+    background-size: cover
+    min-height: 140px
+    margin-bottom: 0 !important
+    padding: 15px 0
+
+    .input-text, .input-email
+        height: 50px
+        border-radius: 50px
+        font-size: 14px
+        font-weight: medium
+        color: #999999
+        padding: 0 30px
+
+    &__form
+        width: viewport
+        max-width: calc(100% - 30px)
+        margin: 0 auto
+
+    &__text
+        font-size: 18px
+        font-weight: medium
+        color: #fff
+
+    &__btn
+        height: 50px
+        background: linear-gradient(to bottom, #9abe55, #80a93a)
+        border-radius: 50px
+        box-shadow: 0 1px 0 #66882e
+        min-width: 110px
+
+@media (min-width: 993px)
+    .newsletter
+        &__name
+            flex: 1 1 40%
+
+        &__form
+            flex-wrap: nowrap
+
+        &__text
+            text-align: right
+            max-width: 340px
+            margin-right: 20px
+
+            span
+                display: block

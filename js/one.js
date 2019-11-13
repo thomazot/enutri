@@ -1030,8 +1030,11 @@ function default_carrossel_jointsales() {
  */
 function fix_category_description() {
     // category description
-    if ($j('.category-description').length > 0 && $j('.toolbar').length > 0) {
-        $j('.toolbar')
+    if (
+        $j('.category-description').length > 0 &&
+        $j('.toolbar-bottom').length > 0
+    ) {
+        $j('.toolbar-bottom')
             .first()
             .after($j('.category-description'))
         $j('.category-description').show()
@@ -1140,19 +1143,9 @@ function is468() {
  */
 function hideHeader(status) {
     if (status) {
-        $j('.header-container').animate(
-            {
-                top: '-' + $j('.header-container').outerHeight() + 'px',
-            },
-            200
-        )
+        $j('.header-container').hide()
     } else {
-        $j('.header-container').animate(
-            {
-                top: '0px',
-            },
-            200
-        )
+        $j('.header-container').show()
     }
     return false
 }
@@ -1454,6 +1447,17 @@ $j(document)
 
         // Header sticky
         stickybits('.header-container')
+
+        if ($('.category-image').length) {
+            $('.breadcrumb').after($('.category-image').show())
+        }
+        var filtered = $('.filters__filtered')
+
+        if ($(window).width() > 993) {
+            if (filtered.length) {
+                $('.col-main').prepend(filtered)
+            }
+        }
     })
     .on('resizeStop', function(e) {
         // Safe window.resize

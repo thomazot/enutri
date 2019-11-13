@@ -1,0 +1,30 @@
+.toolbar
+    .amount
+        font-size: 13px
+        font-weight: medium
+        color: #666666
+
+        span
+            font-weight: medium
+
+    .pager li
+        font-size: 13px
+        font-weight: medium
+
+        a
+            color: #666
+
+            &[rel=next], &[rel=prev]
+                color: color1_bg
+
+        span span
+            border-radius: 50%
+
+@media (min-width: 993px)
+    .toolbar-bottom .toolbar
+        display: flex !important
+        justify-content: space-between
+        align-items: center
+        border-top: solid 1px #e5e5e5
+        border-bottom: solid 1px #e5e5e5
+        padding: 10px 0
