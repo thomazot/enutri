@@ -1,0 +1,42 @@
+<div class="prod__img">
+    @fotos
+    @selos
+</div>
+<div class="prod__shop">	
+    <div class="col3">
+        <div class="prod__name"><h1>@nome</h1></div>
+    </div>
+	<div class="col2">	
+		@if(is_disponivel)
+			@preco
+			@preco(avista)
+			@preco(parcelado)	
+        
+            @brinde
+        
+            @programa-fidelidade(Compre e Ganhe)
+            @bt(comprar)
+            @links
+        
+            @simulador-frete
+		@else(is_disponivel)		
+			<div class="prod__esgotado">
+				<div class="title title--sm">Produto Esgotado</div>
+				@alertas
+			</div>
+		@endif(is_disponivel)
+	</div>
+	<div class="col1">
+        @avaliacoes
+        <small class="sku">Código: @atributo(sku)</small>
+        @marca
+
+        <div class="prod__short-desc std">@descricao(curta)</div>
+
+		
+		@variacoes
+        @bt(sobconsulta "Sob Consulta")
+        @temporizador
+        
+	</div>
+</div>

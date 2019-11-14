@@ -1,0 +1,52 @@
+<button type="button" class="menu__show"></button>
+<div class="menu">
+    <div class="menu__container">
+        <div class="menu__header"><button type="button" class="menu__hide"></button></div>
+        <div class="menu__item menu__item--categoria">
+            <div class="menu__label">Categorias <svg class="ico z-down"><use xlink:href="#z-down" /></svg></div>
+            <div class="menu__content">
+                <div class="menu__box">{{widget type="interface/widget_menu" template="interface/widgets/menu.phtml" identificador="menutop" exibicao="normal" niveis="2"}}</div>
+                <div class="menu__banner"><img src="@img(bannermenu)" /></div>
+            </div>
+        </div>
+
+        <div class="menu__item menu__item--marca">
+                <div class="menu__label">Marcas <svg class="ico z-down"><use xlink:href="#z-down" /></svg></div>
+                <div class="menu__content">
+                    <div class="menu__box">
+                        {{widget type="shopbybrand/widget" template="shopbybrand/widget.phtml" identificador="marca" exibicao="lista" markup="<a href='@url-marca'>
+                            '@imagem-marca(100x100)
+                            <span>@nome-marca</span>
+                        </a>"}}
+                    </div>
+                </div>
+            </div>
+
+        <div class="menu__item menu__item--oferta">
+                <div class="menu__label">Ofertas <svg class="ico z-down"><use xlink:href="#z-down" /></svg></div>
+                <div class="menu__content">
+  {{widget type="interface/widget_produtos" template="interface/widgets/produtos.phtml" title="Ofertas do dia" identificador="menuproduto" limite="3" exibir_sem_estoque="1" markup="<h2 class='products__header'>
+    <a href='@url' itemprop='url' title='Mais detalhes' class='products__link'>
+        <span class='products__image product-image'>@foto(260x260)</span>
+    </a>
+    @selos
+</h2>
+<div class='products__main'>
+    <a href='@url' title='@nome(60)' class='products__name'>@nome</a>
+    @variacoes
+
+    @if(is_disponivel)
+        @preco
+        @preco(parcelado)
+        @preco(avista)
+    @else(is_disponivel)
+        <div class='products__out'>Produto Esgotado</div>
+    @endif(is_disponivel)
+
+</div>"}}                  <div class="menu__box">
+                            
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
