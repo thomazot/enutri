@@ -12743,6 +12743,25 @@ body {
   .frete__naosei {
     display: none;
   }
+  .frete__results {
+    transform: none;
+    position: static;
+    padding: 15px;
+    width: 100%;
+    border: 0;
+    margin-top: 20px;
+    height: auto;
+    font-size: 13px;
+  }
+  .frete__results dt,
+  .frete__results dd {
+    font-size: 12px;
+  }
+  .frete__results > .title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
   .frete__title {
     justify-content: flex-start;
     align-items: center;
